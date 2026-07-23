@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese la cantidad en metros: ");
+        double metros = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("\n--- Menú de Conversiones ---");
+        Console.WriteLine("1. Milímetros");
+        Console.WriteLine("2. Centímetros");
+        Console.WriteLine("3. Decímetros");
+        Console.WriteLine("4. Hectómetros");
+        Console.WriteLine("5. Kilómetros");
+        Console.Write("Seleccione una opción (1-5): ");
+        int opcion = int.Parse(Console.ReadLine());
+
+        double resultado = 0;
+        switch (opcion)
+        {
+            case 1:
+                resultado = metros * 1000;
+                Console.WriteLine($"{metros} metros equivale a {resultado} milímetros");
+                break;
+            case 2:
+                resultado = metros * 100;
+                Console.WriteLine($"{metros} metros equivale a {resultado} centímetros");
+                break;
+            case 3:
+                resultado = metros * 10;
+                Console.WriteLine($"{metros} metros equivale a {resultado} decímetros");
+                break;
+            case 4:
+                resultado = metros / 100;
+                Console.WriteLine($"{metros} metros equivale a {resultado} hectómetros");
+                break;
+            case 5:
+                resultado = metros / 1000;
+                Console.WriteLine($"{metros} metros equivale a {resultado} kilómetros");
+                break;
+            default:
+                Console.WriteLine("Opción no válida.");
+                break;
+        }
+    }
+}
