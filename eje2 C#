@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingresa tu mes de nacimiento (1-12): ");
+        int mes = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingresa tu día de nacimiento (1-31): ");
+        int dia = int.Parse(Console.ReadLine());
+
+        string signo = "";
+        string horoscopo = "";
+
+        if ((mes == 3 && dia >= 21) || (mes == 4 && dia <= 19)) { signo = "Aries"; horoscopo = "Hoy es un buen día para emprender nuevos retos."; }
+        else if ((mes == 4 && dia >= 20) || (mes == 5 && dia <= 20)) { signo = "Tauro"; horoscopo = "La paciencia será tu mejor aliada en el trabajo."; }
+        else if ((mes == 5 && dia >= 21) || (mes == 6 && dia <= 20)) { signo = "Géminis"; horoscopo = "Una conversación interesante renovará tus ideas."; }
+        else if ((mes == 6 && dia >= 21) || (mes == 7 && dia <= 22)) { signo = "Cáncer"; horoscopo = "Dedica tiempo de calidad a tu familia."; }
+        else if ((mes == 7 && dia >= 23) || (mes == 8 && dia <= 22)) { signo = "Leo"; horoscopo = "Tu confianza te abrirá nuevas puertas."; }
+        else if ((mes == 8 && dia >= 23) || (mes == 9 && dia <= 22)) { signo = "Virgo"; horoscopo = "La organización te evitará contratiempos."; }
+        else if ((mes == 9 && dia >= 23) || (mes == 10 && dia <= 22)) { signo = "Libra"; horoscopo = "Busca el equilibrio en tus decisiones."; }
+        else if ((mes == 10 && dia >= 23) || (mes == 11 && dia <= 21)) { signo = "Escorpio"; horoscopo = "Confía en tu intuición hoy."; }
+        else if ((mes == 11 && dia >= 22) || (mes == 12 && dia <= 21)) { signo = "Sagitario"; horoscopo = "Un toque de aventura alegrará tu semana."; }
+        else if ((mes == 12 && dia >= 22) || (mes == 1 && dia <= 19)) { signo = "Capricornio"; horoscopo = "Tu disciplina traerá grandes resultados."; }
+        else if ((mes == 1 && dia >= 20) || (mes == 2 && dia <= 18)) { signo = "Acuario"; horoscopo = "Aprovecha tu creatividad al máximo."; }
+        else if ((mes == 2 && dia >= 19) || (mes == 3 && dia <= 20)) { signo = "Piscis"; horoscopo = "Escucha tu voz interior y descansa."; }
+        else { signo = "Desconocido"; horoscopo = "Fecha inválida."; }
+
+        Console.WriteLine($"\nSigno: {signo}");
+        Console.WriteLine($"Horóscopo: {horoscopo}");
+    }
+}
