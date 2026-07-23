@@ -1,0 +1,11 @@
+Algoritmo ConversorTemperatura
+    Escribir "Ingrese la temperatura en grados Celsius (°C):"
+    Leer c
+    
+    f <- (c * 9/5) + 32
+    k <- c + 273.15
+    
+    Escribir "a. Fahrenheit: ", f, " °F"
+    Escribir "b. Celsius: ", c, " °C"
+    Escribir "c. Kelvin: ", k, " K"
+FinAlgoritmo
