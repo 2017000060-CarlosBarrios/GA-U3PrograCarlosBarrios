@@ -1,0 +1,38 @@
+Algoritmo ConvertidorBase
+    Escribir "1. Decimal a Binario"
+    Escribir "2. Binario a Decimal"
+    Escribir "Seleccione opción (1 o 2):"
+    Leer op
+    
+    Si op = 1 Entonces
+        Escribir "Ingrese número decimal entero:"
+        Leer num
+        Si num = 0 Entonces
+            Escribir "Binario: 0"
+        Sino
+            binario <- ""
+            Mientras num > 0 Hacer
+                residuo <- num % 2
+                binario <- Concatenar(ConvertirATexto(residuo), binario)
+                num <- TRUNC(num / 2)
+            FinMientras
+            Escribir "Binario: ", binario
+        FinSi
+    Sino Si op = 2 Entonces
+        Escribir "Ingrese número binario:"
+        Leer binStr
+        dec <- 0
+        pot <- 1
+        n <- Longitud(binStr)
+        Para i <- n Hasta 1 Con Paso -1 Hacer
+            bit <- Subcadena(binStr, i, i)
+            Si bit = "1" Entonces
+                dec <- dec + pot
+            FinSi
+            pot <- pot * 2
+        FinPara
+        Escribir "Decimal: ", dec
+    Sino
+        Escribir "Opción inválida."
+    FinSi
+FinAlgoritmo
