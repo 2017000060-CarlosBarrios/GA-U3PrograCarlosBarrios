@@ -1,0 +1,23 @@
+Algoritmo AgendaTelefonica
+    Dimension nombres[10]
+    Dimension telefonos[10]
+    
+    Para i <- 1 Hasta 10 Con Paso 1 Hacer
+        Escribir "Persona #", i, ":"
+        Escribir "Ingrese nombre:"
+        Leer nombres[i]
+        Escribir "Ingrese teléfono:"
+        Leer telefonos[i]
+    FinPara
+    
+    Escribir "Ingrese la posición a consultar (1 a 10):"
+    Leer pos
+    
+    Si pos >= 1 Y pos <= 10 Entonces
+        Escribir "--- Datos en la posición ", pos, " ---"
+        Escribir "Nombre: ", nombres[pos]
+        Escribir "Teléfono: ", telefonos[pos]
+    Sino
+        Escribir "Posición fuera de rango."
+    FinSi
+FinAlgoritmo
