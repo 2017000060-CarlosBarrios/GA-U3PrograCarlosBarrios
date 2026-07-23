@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] nombres = new string[10];
+        string[] telefonos = new string[10];
+
+        Console.WriteLine("=== REGISTRO DE AGENDA (10 Personas) ===");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine($"\nPersona #{i + 1}:");
+            Console.Write("Nombre: ");
+            nombres[i] = Console.ReadLine();
+
+            Console.Write("Teléfono: ");
+            telefonos[i] = Console.ReadLine();
+        }
+
+        Console.Write("\nIngrese el número de posición a consultar (1 a 10): ");
+        if (int.TryParse(Console.ReadLine(), out int posicion) && posicion >= 1 && posicion <= 10)
+        {
+            int idx = posicion - 1;
+            Console.WriteLine($"\nNombre: {nombres[idx]}");
+            Console.WriteLine($"Teléfono: {telefonos[idx]}");
+        }
+        else
+        {
+            Console.WriteLine("Posición no válida.");
+        }
+    }
+}
