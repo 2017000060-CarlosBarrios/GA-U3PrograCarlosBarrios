@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("1. Decimal a Binario");
+        Console.WriteLine("2. Binario a Decimal");
+        Console.Write("Seleccione una opción (1 o 2): ");
+        int op = int.Parse(Console.ReadLine());
+
+        if (op == 1)
+        {
+            Console.Write("Ingrese un número decimal: ");
+            int decimalNum = int.Parse(Console.ReadLine());
+            string binario = Convert.ToString(decimalNum, 2);
+            Console.WriteLine($"Resultado Binario: {binario}");
+        }
+        else if (op == 2)
+        {
+            Console.Write("Ingrese un número binario: ");
+            string binStr = Console.ReadLine();
+            int decimalNum = Convert.ToInt32(binStr, 2);
+            Console.WriteLine($"Resultado Decimal: {decimalNum}");
+        }
+        else
+        {
+            Console.WriteLine("Opción no válida.");
+        }
+    }
+}
