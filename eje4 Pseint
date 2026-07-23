@@ -1,0 +1,13 @@
+Algoritmo LaFraseInvertida
+    Escribir "Ingrese una frase:"
+    Leer frase
+    
+    fraseInvertida <- ""
+    n <- Longitud(frase)
+    
+    Para i <- n Hasta 1 Con Paso -1 Hacer
+        fraseInvertida <- Concatenar(fraseInvertida, Subcadena(frase, i, i))
+    FinPara
+    
+    Escribir "Frase invertida: ", fraseInvertida
+FinAlgoritmo
